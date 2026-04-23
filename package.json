@@ -1,0 +1,105 @@
+{
+  "name": "@arckit/nextjs",
+  "version": "1.0.0",
+  "description": "Next.js App Router utilities — page/layout/action/route builders with middleware pipeline",
+  "packageManager": "pnpm@10.33.0",
+  "license": "MIT",
+  "author": "Marc Gavanier <marc@gavanier.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arckit-dev/nextjs.git"
+  },
+  "homepage": "https://github.com/arckit-dev/nextjs#readme",
+  "bugs": {
+    "url": "https://github.com/arckit-dev/nextjs/issues"
+  },
+  "keywords": ["arckit", "nextjs", "app-router", "server-actions", "middleware", "pipeline"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint:code": "biome check --write",
+    "lint:code:ci": "biome ci",
+    "lint:commit": "commitlint --from origin/main",
+    "lint:unused": "knip",
+    "check:publint": "publint",
+    "check:attw": "attw --pack .",
+    "check:size": "size-limit",
+    "release": "semantic-release",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "@arckit/daisyui": ">=1",
+    "next": ">=15",
+    "piqure": ">=2",
+    "react": ">=19",
+    "react-dom": ">=19",
+    "react-hot-toast": ">=2"
+  },
+  "devDependencies": {
+    "@arckit/daisyui": "^1.0.0",
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@biomejs/biome": "^2.4.0",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/exec": "^7.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@size-limit/file": "^11.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "husky": "^9.0.0",
+    "jsdom": "^26.0.0",
+    "knip": "^5.0.0",
+    "lint-staged": "^16.0.0",
+    "next": "^16.0.0",
+    "piqure": "^2.2.0",
+    "publint": "^0.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.0.0",
+    "semantic-release": "^24.0.0",
+    "size-limit": "^11.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "knip": {
+    "ignore": ["**/*.stories.tsx"]
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "20 kB"
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
