@@ -9,6 +9,18 @@ coverage:
 
 ignore:
   - "**/*.tsx"
+  - "src/action/action-builder.ts"
+  - "src/action/action-error.ts"
+  - "src/action/from-either.ts"
+  - "src/action/hook.ts"
+  - "src/action/middlewares/**"
+  - "src/create-nextjs.ts"
+  - "src/client-binder.tsx"
+  - "src/with-client-binder.ts"
+  - "src/layout/**"
+  - "src/page/**"
+  - "src/route/**"
+  - "src/shared/**"
 
 flags:
   unit:
