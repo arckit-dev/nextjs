@@ -1,0 +1,17 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 80%
+    patch:
+      default:
+        target: 80%
+
+ignore:
+  - "**/*.tsx"
+
+flags:
+  unit:
+    paths:
+      - src/
+    carryforward: true
