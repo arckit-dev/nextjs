@@ -54,14 +54,22 @@
   },
   "peerDependencies": {
     "@arckit/daisyui": ">=1",
+    "effect": ">=3",
     "next": ">=15",
     "piqure": ">=2",
     "react": ">=19",
     "react-dom": ">=19",
-    "react-hot-toast": ">=2"
+    "react-hot-toast": ">=2",
+    "react-icons": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "effect": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@arckit/daisyui": "^1.0.0",
+    "effect": "^3.0.0",
     "@arethetypeswrong/cli": "^0.17.0",
     "@biomejs/biome": "^2.4.0",
     "@commitlint/cli": "^20.0.0",
@@ -87,10 +95,8 @@
     "size-limit": "^11.0.0",
     "tsup": "^8.4.0",
     "typescript": "^5.9.0",
+    "react-icons": "^5.0.0",
     "vitest": "^4.0.0"
-  },
-  "knip": {
-    "ignore": ["**/*.stories.tsx"]
   },
   "size-limit": [
     {
