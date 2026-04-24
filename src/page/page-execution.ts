@@ -1,6 +1,7 @@
+import type { Provider } from '@arckit/pipeline';
+import { applyProviders } from '@arckit/pipeline';
 import type { ReactNode } from 'react';
-import type { Pipeline, Provider } from '../shared/types';
-import { applyProviders } from './apply-providers';
+import type { Pipeline } from '../types';
 
 type AnyMiddleware<TExtra> = (
   ctx: Record<string, unknown>,

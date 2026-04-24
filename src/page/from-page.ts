@@ -1,4 +1,4 @@
-import type { Pipeline } from '../shared/types';
+import type { Pipeline } from '../types';
 import type { PageProps } from './types';
 
 type AnyMiddleware<TExtra> = (ctx: Record<string, unknown>, extra: TExtra) => Promise<{ ctx: Record<string, unknown> }>;

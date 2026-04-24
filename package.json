@@ -54,6 +54,7 @@
   },
   "peerDependencies": {
     "@arckit/daisyui": ">=1",
+    "@arckit/pipeline": ">=1",
     "effect": ">=3",
     "next": ">=15",
     "piqure": ">=2",
@@ -69,6 +70,7 @@
   },
   "devDependencies": {
     "@arckit/daisyui": "^1.0.0",
+    "@arckit/pipeline": "^1.0.0",
     "effect": "^3.0.0",
     "@arethetypeswrong/cli": "^0.17.0",
     "@biomejs/biome": "^2.4.0",

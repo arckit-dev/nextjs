@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { render } from '../page/page-execution';
-import type { Pipeline } from '../shared/types';
+import type { Pipeline } from '../types';
 import type { LayoutProps } from './types';
 
 type AnyMiddleware = (ctx: Record<string, unknown>, extra: LayoutProps) => Promise<{ ctx: Record<string, unknown> }>;
