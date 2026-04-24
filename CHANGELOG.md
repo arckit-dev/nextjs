@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/arckit-dev/nextjs/compare/v1.2.0...v1.3.0) (2026-04-24)
+
+
+### Features
+
+* add i18n subpath with createWithI18n, createWithLang, createMetadataTranslation ([ad7b9fa](https://github.com/arckit-dev/nextjs/commit/ad7b9fad9b451e8710d41be5995e22d16cc46e94))
+
 # [1.2.0](https://github.com/arckit-dev/nextjs/compare/v1.1.0...v1.2.0) (2026-04-24)
 
 
