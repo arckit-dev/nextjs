@@ -1,4 +1,4 @@
-export { withFetch, withMap } from '../shared/middlewares';
+export { withFetch, withMap } from '@arckit/pipeline';
 export { fromPage, use } from './from-page';
 export { withDecode, withEither, withHeaders, withPagination, withParams, withRequired, withSearchParams } from './middlewares';
 export { createPageBuilder, type PageBuilder } from './page-builder';

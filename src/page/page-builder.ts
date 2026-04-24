@@ -1,7 +1,7 @@
 import type { InjectionKey } from 'piqure/src/Providing';
 import type { ReactNode } from 'react';
 import { ERROR_PREFIX_KEY } from '../action/technical-error-formatter';
-import type { Pipeline } from '../shared/types';
+import type { Pipeline } from '../types';
 import { render } from './page-execution';
 import type { PageProps } from './types';
 
