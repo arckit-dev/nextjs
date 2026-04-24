@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/arckit-dev/nextjs/compare/v1.1.0...v1.2.0) (2026-04-24)
+
+
+### Features
+
+* expose elementary factories, remove wrapper createNextjs ([35e3ea2](https://github.com/arckit-dev/nextjs/commit/35e3ea24a9e1c08cc22d6a8ac4104f4100cd865c))
+
 # [1.1.0](https://github.com/arckit-dev/nextjs/compare/v1.0.0...v1.1.0) (2026-04-24)
 
 
