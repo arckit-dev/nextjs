@@ -1,9 +1,11 @@
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: {
+    index: 'src/index.ts',
+    client: 'src/client/index.ts'
+  },
   format: ['esm', 'cjs'],
   dts: true,
   splitting: false,
@@ -14,12 +16,10 @@ export default defineConfig({
   outDir: 'dist',
   target: 'es2022',
   async onSuccess() {
-    const files = readdirSync('dist').filter((f) => f.endsWith('.js') || f.endsWith('.cjs'));
-    for (const file of files) {
-      const filePath = join('dist', file);
-      const content = readFileSync(filePath, 'utf-8');
-      if (!content.startsWith('"use client"') && !content.startsWith("'use client'")) {
-        writeFileSync(filePath, `"use client";\n${content}`);
+    for (const file of ['dist/client.js', 'dist/client.cjs']) {
+      const content = readFileSync(file, 'utf-8');
+      if (!content.startsWith('"use client"')) {
+        writeFileSync(file, `"use client";\n${content}`);
       }
     }
   }

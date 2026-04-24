@@ -1,5 +1,6 @@
 export type { Provider } from '@arckit/pipeline';
 export * from './action';
+export { createWithProvide } from './action/middlewares/with-provide';
 export * from './components';
 export { createNextjs, type NextjsDependencies } from './create-nextjs';
 export * from './href-with-search-params';
@@ -8,3 +9,4 @@ export * from './page';
 export { withErrorHandler, withSearchParams as withRouteSearchParams } from './route/middlewares';
 export { routeBuilder } from './route/route-builder';
 export type { Pipeline } from './types';
+export { createWithClientBinder } from './with-client-binder';
