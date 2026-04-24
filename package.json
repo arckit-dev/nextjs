@@ -124,8 +124,5 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "dependencies": {
-    "@arckit/nextjs": "^1.0.0"
   }
 }
