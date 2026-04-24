@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/arckit-dev/nextjs/compare/v1.3.0...v1.3.1) (2026-04-24)
+
+
+### Bug Fixes
+
+* pass I18nProvider as parameter to avoid client import in server bundle ([d7fd3e7](https://github.com/arckit-dev/nextjs/commit/d7fd3e77f914add69d069c7ef92a9e2ecfd57d9f))
+
 # [1.3.0](https://github.com/arckit-dev/nextjs/compare/v1.2.0...v1.3.0) (2026-04-24)
 
 
