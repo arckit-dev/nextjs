@@ -2,7 +2,6 @@ export type { Provider } from '@arckit/pipeline';
 export * from './action';
 export { createWithProvide } from './action/middlewares/with-provide';
 export * from './components';
-export { createNextjs, type NextjsDependencies } from './create-nextjs';
 export * from './href-with-search-params';
 export * from './layout';
 export * from './page';
