@@ -21,6 +21,7 @@ ignore:
   - "src/page/**"
   - "src/route/**"
   - "src/shared/**"
+  - "src/i18n/**"
 
 flags:
   unit:
