@@ -1,10 +1,10 @@
 import type { I18nConfig, Namespace, TypedTFunction } from '@arckit/i18n';
 import { detectLng, RESOURCE_LOADER, TRANSLATION } from '@arckit/i18n';
-import { I18nProvider } from '@arckit/i18n/client';
 import type { Provider } from '@arckit/pipeline';
 import i18next, { type i18n, type Resource } from 'i18next';
 import { headers } from 'next/headers';
 import type { InjectionKey } from 'piqure/src/Providing';
+import type { ComponentType, ReactNode } from 'react';
 import { cache } from 'react';
 
 type Inject = <T>(key: InjectionKey<T>) => T;
@@ -109,8 +109,10 @@ export const createInitI18n =
     return { locale: lng, namespaces, resources: i18nResources };
   };
 
+type I18nProviderComponent = ComponentType<{ locale: string; namespaces: string[]; resources: Resource; children: ReactNode }>;
+
 export const createWithI18n =
-  (inject: Inject, provide: Provide) =>
+  (inject: Inject, provide: Provide, I18nProvider: I18nProviderComponent) =>
   (config: I18nConfig) =>
   <N extends Namespace>(namespace: N, ...namespaces: N[]) =>
   async <TContext extends object>(_ctx: TContext): Promise<{ ctx: object; provider: Provider }> => {
