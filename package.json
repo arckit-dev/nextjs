@@ -35,6 +35,16 @@
         "types": "./dist/client.d.cts",
         "default": "./dist/client.cjs"
       }
+    },
+    "./i18n": {
+      "import": {
+        "types": "./dist/i18n.d.ts",
+        "default": "./dist/i18n.js"
+      },
+      "require": {
+        "types": "./dist/i18n.d.cts",
+        "default": "./dist/i18n.cjs"
+      }
     }
   },
   "main": "./dist/index.cjs",
@@ -42,7 +52,8 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "client": ["dist/client.d.ts"]
+      "client": ["dist/client.d.ts"],
+      "i18n": ["dist/i18n.d.ts"]
     }
   },
   "files": ["dist"],
@@ -69,7 +80,9 @@
   },
   "peerDependencies": {
     "@arckit/daisyui": ">=1",
+    "@arckit/i18n": ">=1",
     "@arckit/pipeline": ">=1",
+    "i18next": ">=25",
     "effect": ">=3",
     "next": ">=15",
     "piqure": ">=2",
@@ -79,13 +92,21 @@
     "react-icons": ">=5"
   },
   "peerDependenciesMeta": {
+    "@arckit/i18n": {
+      "optional": true
+    },
     "effect": {
+      "optional": true
+    },
+    "i18next": {
       "optional": true
     }
   },
   "devDependencies": {
     "@arckit/daisyui": "^1.0.0",
+    "@arckit/i18n": "^1.0.0",
     "@arckit/pipeline": "^1.0.0",
+    "i18next": "^25.0.0",
     "@arethetypeswrong/cli": "^0.17.0",
     "@biomejs/biome": "^2.4.0",
     "@commitlint/cli": "^20.0.0",
