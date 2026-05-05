@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/arckit-dev/nextjs/compare/v1.4.0...v1.5.0) (2026-05-05)
+
+
+### Features
+
+* add variadic use() to actionBuilder for parallel middleware execution ([5e326a7](https://github.com/arckit-dev/nextjs/commit/5e326a7dcd359ab5b8012b116d30465f9d37a0cb))
+
 # [1.4.0](https://github.com/arckit-dev/nextjs/compare/v1.3.1...v1.4.0) (2026-05-05)
 
 
