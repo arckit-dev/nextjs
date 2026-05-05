@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/arckit-dev/nextjs/compare/v1.3.1...v1.4.0) (2026-05-05)
+
+
+### Features
+
+* add withOptionalEither page middleware ([a5a2afc](https://github.com/arckit-dev/nextjs/commit/a5a2afcc3b69c7ceb52223d3080bb1d7f67dc257))
+
 ## [1.3.1](https://github.com/arckit-dev/nextjs/compare/v1.3.0...v1.3.1) (2026-04-24)
 
 
