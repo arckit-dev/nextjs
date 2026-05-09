@@ -82,8 +82,9 @@
     "@arckit/daisyui": ">=1",
     "@arckit/i18n": ">=1",
     "@arckit/pipeline": ">=1",
-    "i18next": ">=25",
+    "@arckit/resultset": ">=1",
     "effect": ">=3",
+    "i18next": ">=25",
     "next": ">=15",
     "piqure": ">=2",
     "react": ">=19",
@@ -93,6 +94,9 @@
   },
   "peerDependenciesMeta": {
     "@arckit/i18n": {
+      "optional": true
+    },
+    "@arckit/resultset": {
       "optional": true
     },
     "effect": {
@@ -106,7 +110,7 @@
     "@arckit/daisyui": "^1.0.0",
     "@arckit/i18n": "^1.0.0",
     "@arckit/pipeline": "^1.0.0",
-    "i18next": "^25.0.0",
+    "@arckit/resultset": "1.1.0",
     "@arethetypeswrong/cli": "^0.17.0",
     "@biomejs/biome": "^2.4.0",
     "@commitlint/cli": "^20.0.0",
@@ -120,6 +124,7 @@
     "@vitest/coverage-v8": "^4.0.0",
     "effect": "^3.0.0",
     "husky": "^9.0.0",
+    "i18next": "^25.0.0",
     "jsdom": "^26.0.0",
     "knip": "^5.0.0",
     "lint-staged": "^16.0.0",
