@@ -8,7 +8,8 @@ export {
   withPagination,
   withParams,
   withRequired,
-  withSearchParams
+  withSearchParams,
+  withSearchTerm
 } from './middlewares';
 export { createPageBuilder, type PageBuilder } from './page-builder';
 export { render } from './page-execution';
