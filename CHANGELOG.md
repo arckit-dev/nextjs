@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/arckit-dev/nextjs/compare/v1.5.0...v1.6.0) (2026-05-09)
+
+
+### Features
+
+* add pagination and search term middlewares ([eff284b](https://github.com/arckit-dev/nextjs/commit/eff284b73f2d58d33be0f1827aaf560bb44bf3c5))
+
 # [1.5.0](https://github.com/arckit-dev/nextjs/compare/v1.4.0...v1.5.0) (2026-05-05)
 
 
