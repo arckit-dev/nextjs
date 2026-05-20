@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/arckit-dev/nextjs/compare/v1.6.0...v1.7.0) (2026-05-20)
+
+
+### Features
+
+* expose all client-safe modules on /client subpath ([baa8335](https://github.com/arckit-dev/nextjs/commit/baa8335354323b0231693afcb1e7396617dfed76))
+
 # [1.6.0](https://github.com/arckit-dev/nextjs/compare/v1.5.0...v1.6.0) (2026-05-09)
 
 
