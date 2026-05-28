@@ -3,8 +3,9 @@ import { describe, expect, it } from 'vitest';
 import { createPageBuilder } from './page-builder';
 import type { PageProps } from './types';
 
-const noopBinder = <TBind, TTo extends TBind>(_bind: InjectionKey<TBind>, _to: TTo) => async (ctx: Record<string, unknown>) =>
-  ({ ctx });
+const noopBinder =
+  <TBind, TTo extends TBind>(_bind: InjectionKey<TBind>, _to: TTo) =>
+  async (ctx: Record<string, unknown>) => ({ ctx });
 
 const pageBuilder = createPageBuilder(noopBinder);
 
