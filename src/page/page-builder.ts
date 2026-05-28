@@ -42,6 +42,7 @@ export interface PageBuilder<TCtx extends object> {
 
 type PageBuilderOptions = {
   errorPrefix?: string;
+  wrap?: (run: () => Promise<ReactNode>) => Promise<ReactNode>;
 };
 
 type WithClientBinder = <TBind, TTo extends TBind>(bind: InjectionKey<TBind>, to: TTo) => AnyMiddleware;
@@ -64,7 +65,9 @@ export const createPageBuilder =
             _finalizer: 'page',
             middlewares: entries
           };
-          return render(pipeline)(handler);
+          const route = render(pipeline)(handler);
+          const { wrap } = options ?? {};
+          return wrap ? (props: PageProps) => wrap(() => route(props)) : route;
         }
       }) as PageBuilder<TCtx>;
 
