@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/arckit-dev/nextjs/compare/v1.7.0...v1.8.0) (2026-05-28)
+
+
+### Features
+
+* **page:** add optional wrap decorator to createPageBuilder ([839ceb1](https://github.com/arckit-dev/nextjs/commit/839ceb1da1f4053f9a880be3b44ec258150f90ea))
+
 # [1.7.0](https://github.com/arckit-dev/nextjs/compare/v1.6.0...v1.7.0) (2026-05-20)
 
 
