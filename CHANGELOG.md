@@ -1,3 +1,12 @@
+# [1.14.0](https://github.com/arckit-dev/nextjs/compare/v1.13.0...v1.14.0) (2026-05-29)
+
+
+### Features
+
+* **action,page:** ./action subpath, validator-agnostic withInput, createWithClientBinder on ./page ([a717d7c](https://github.com/arckit-dev/nextjs/commit/a717d7c76e281a33fb2c4ff59ea5e7fc538e88c2))
+* **data,layout:** cache-aware withFetch and ./layout subpath ([0448863](https://github.com/arckit-dev/nextjs/commit/04488631933f5809df1500fa26412b2a5045ba7f))
+* **route:** add ./route subpath with required guard and csv helpers ([2305756](https://github.com/arckit-dev/nextjs/commit/23057565e47ff7cb756db8be0cca4173be8908cc))
+
 # [1.13.0](https://github.com/arckit-dev/nextjs/compare/v1.12.0...v1.13.0) (2026-05-29)
 
 
