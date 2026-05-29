@@ -1,5 +1,6 @@
 import type { EventName, EventProperties, EventTracker } from '@arckit/telemetry';
 import type { PipeMiddleware, ServerActionResult } from '../action';
+import { preservingAfter } from './preserving-after';
 import type { Scheduler } from './scheduler';
 
 type PropertiesExtractor<TCtx> = (ctx: TCtx) => EventProperties;
@@ -9,7 +10,7 @@ type WithEventTrackerOptions<TCtx> = {
 };
 
 export const withEventTracker =
-  (tracker: EventTracker, schedule: Scheduler) =>
+  (tracker: EventTracker, schedule: Scheduler = preservingAfter) =>
   <TCtx extends object>(
     event: EventName,
     { extractProperties }: WithEventTrackerOptions<TCtx> = {}

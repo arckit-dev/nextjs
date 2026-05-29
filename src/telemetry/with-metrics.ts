@@ -1,11 +1,12 @@
 import type { Metrics } from '@arckit/telemetry';
 import type { PipeMiddleware, ServerActionResult } from '../action';
+import { preservingAfter } from './preserving-after';
 import type { Scheduler } from './scheduler';
 
 const ACTIONS_TOTAL = 'actions_total';
 const ACTION_DURATION_MS = 'action_duration_ms';
 
-export const withMetrics = (metrics: Metrics, schedule: Scheduler) => {
+export const withMetrics = (metrics: Metrics, schedule: Scheduler = preservingAfter) => {
   const counter = metrics.counter(ACTIONS_TOTAL, { description: 'Number of server actions executed' });
   const histogram = metrics.histogram(ACTION_DURATION_MS, {
     description: 'Server action duration in milliseconds',

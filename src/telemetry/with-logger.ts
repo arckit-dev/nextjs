@@ -1,5 +1,6 @@
 import type { LogAttributes, Logger, LogLevel } from '@arckit/telemetry';
 import type { PipeMiddleware, ServerActionResult } from '../action';
+import { preservingAfter } from './preserving-after';
 import type { Scheduler } from './scheduler';
 
 type AttributesExtractor<TCtx> = (ctx: TCtx) => LogAttributes;
@@ -10,7 +11,7 @@ type WithLoggerOptions<TCtx> = {
 };
 
 export const withLogger =
-  (logger: Logger, schedule: Scheduler) =>
+  (logger: Logger, schedule: Scheduler = preservingAfter) =>
   <TCtx extends object>(
     event: string,
     { level = 'info', extractAttributes }: WithLoggerOptions<TCtx> = {}
