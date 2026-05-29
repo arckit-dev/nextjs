@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/arckit-dev/nextjs/compare/v1.14.0...v1.15.0) (2026-05-29)
+
+
+### Features
+
+* **client,route:** add ./client/bindings subpath and route withParams middleware ([ff8be06](https://github.com/arckit-dev/nextjs/commit/ff8be06d8bbb843903b64e6cfb6c00e5ba963959))
+
 # [1.14.0](https://github.com/arckit-dev/nextjs/compare/v1.13.0...v1.14.0) (2026-05-29)
 
 
