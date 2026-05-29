@@ -10,6 +10,7 @@ export default defineConfig({
     layout: 'src/layout/index.ts',
     action: 'src/action/index.ts',
     client: 'src/client/index.ts',
+    'client/bindings': 'src/client/bindings.ts',
     i18n: 'src/i18n/index.ts',
     telemetry: 'src/telemetry/index.ts'
   },
@@ -23,7 +24,7 @@ export default defineConfig({
   outDir: 'dist',
   target: 'es2022',
   async onSuccess() {
-    for (const file of ['dist/client.js', 'dist/client.cjs']) {
+    for (const file of ['dist/client.js', 'dist/client.cjs', 'dist/client/bindings.js', 'dist/client/bindings.cjs']) {
       const content = readFileSync(file, 'utf-8');
       if (!content.startsWith('"use client"')) {
         writeFileSync(file, `"use client";\n${content}`);
