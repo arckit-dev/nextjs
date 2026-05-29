@@ -26,6 +26,26 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./page": {
+      "import": {
+        "types": "./dist/page.d.ts",
+        "default": "./dist/page.js"
+      },
+      "require": {
+        "types": "./dist/page.d.cts",
+        "default": "./dist/page.cjs"
+      }
+    },
+    "./page/middlewares": {
+      "import": {
+        "types": "./dist/page/middlewares.d.ts",
+        "default": "./dist/page/middlewares.js"
+      },
+      "require": {
+        "types": "./dist/page/middlewares.d.cts",
+        "default": "./dist/page/middlewares.cjs"
+      }
+    },
     "./client": {
       "import": {
         "types": "./dist/client.d.ts",
@@ -62,6 +82,8 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
+      "page": ["dist/page.d.ts"],
+      "page/middlewares": ["dist/page/middlewares.d.ts"],
       "client": ["dist/client.d.ts"],
       "i18n": ["dist/i18n.d.ts"],
       "telemetry": ["dist/telemetry.d.ts"]

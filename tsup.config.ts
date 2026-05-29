@@ -4,6 +4,8 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: {
     index: 'src/index.ts',
+    page: 'src/page/index.ts',
+    'page/middlewares': 'src/page/middlewares/index.ts',
     client: 'src/client/index.ts',
     i18n: 'src/i18n/index.ts',
     telemetry: 'src/telemetry/index.ts'
