@@ -6,6 +6,7 @@ type CacheOptions<TContext> = {
   tags?: string[];
 };
 
+/* v8 ignore start -- delegates to next/cache unstable_cache, which requires a Next runtime (not exercised in unit tests) */
 const withCache = async (
   cache: { cacheKey: (ctx: unknown) => unknown[]; revalidate: number | false; tags?: string[] },
   ctx: Record<string, unknown>,
@@ -20,6 +21,7 @@ const withCache = async (
   );
   return { ctx: { [key]: await cachedFetcher() } };
 };
+/* v8 ignore stop */
 
 export function withFetch<TKey extends string, TContext, TData>(
   key: TKey,
@@ -33,6 +35,11 @@ export function withFetch(
   fetcher: Function,
   options?: { cache?: { cacheKey: (ctx: unknown) => unknown[]; revalidate: number | false; tags?: string[] } }
 ) {
-  return async (ctx: Record<string, unknown>, _extra: unknown) =>
-    options?.cache ? await withCache(options.cache, ctx, fetcher, key) : { ctx: { [key]: await fetcher(ctx) } };
+  return async (ctx: Record<string, unknown>, _extra: unknown) => {
+    /* v8 ignore next 3 -- cache branch delegates to unstable_cache (Next runtime only) */
+    if (options?.cache) {
+      return withCache(options.cache, ctx, fetcher, key);
+    }
+    return { ctx: { [key]: await fetcher(ctx) } };
+  };
 }
