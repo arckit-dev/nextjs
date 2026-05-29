@@ -1,6 +1,14 @@
-import { getIdentity, getScope, getTrace, type Identity, type TelemetryScope, type Traced } from '@arckit/telemetry/context';
+import {
+  getIdentity,
+  getScope,
+  getTrace,
+  type Identity,
+  runWithScope,
+  type TelemetryScope,
+  type Traced
+} from '@arckit/telemetry/context';
 import { describe, expect, it } from 'vitest';
-import { restoreContext } from './preserving-after';
+import { deferWithContext, restoreContext } from './preserving-after';
 
 describe('restoreContext', () => {
   it('makes the scope visible inside the wrapped callback', () => {
@@ -41,5 +49,19 @@ describe('restoreContext', () => {
     const { promise, resolve } = Promise.withResolvers<TelemetryScope | undefined>();
     restoreContext(undefined, undefined, undefined, () => resolve(getScope()));
     return expect(promise).resolves.toBeUndefined();
+  });
+});
+
+describe('deferWithContext', () => {
+  it('replays the scope captured at schedule time into a callback deferred past the active context', () => {
+    const scope: TelemetryScope = { source: 'server', requestId: 'r1' };
+    const deferred: Array<() => void> = [];
+    const schedule = deferWithContext((callback) => deferred.push(callback));
+    const { promise, resolve } = Promise.withResolvers<TelemetryScope | undefined>();
+
+    runWithScope(scope, () => schedule(() => resolve(getScope())));
+    deferred[0]?.();
+
+    return expect(promise).resolves.toEqual(scope);
   });
 });

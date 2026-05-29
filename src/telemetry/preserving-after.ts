@@ -24,9 +24,13 @@ export const restoreContext = (
   withScope();
 };
 
-export const preservingAfter: Scheduler = (fn) => {
-  const scope = getScope();
-  const identity = getIdentity();
-  const trace = getTrace();
-  after(() => restoreContext(scope, identity, trace, fn));
-};
+export const deferWithContext =
+  (defer: (callback: () => void) => void): Scheduler =>
+  (fn) => {
+    const scope = getScope();
+    const identity = getIdentity();
+    const trace = getTrace();
+    defer(() => restoreContext(scope, identity, trace, fn));
+  };
+
+export const preservingAfter: Scheduler = deferWithContext(after);

@@ -1,4 +1,4 @@
-export { preservingAfter, restoreContext } from './preserving-after';
+export { deferWithContext, preservingAfter, restoreContext } from './preserving-after';
 export type { Scheduler } from './scheduler';
 export { withErrorReporter } from './with-error-reporter';
 export { withEventTracker } from './with-event-tracker';
