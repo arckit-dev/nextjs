@@ -86,6 +86,16 @@
         "default": "./dist/client.cjs"
       }
     },
+    "./client/bindings": {
+      "import": {
+        "types": "./dist/client/bindings.d.ts",
+        "default": "./dist/client/bindings.js"
+      },
+      "require": {
+        "types": "./dist/client/bindings.d.cts",
+        "default": "./dist/client/bindings.cjs"
+      }
+    },
     "./i18n": {
       "import": {
         "types": "./dist/i18n.d.ts",
@@ -118,6 +128,7 @@
       "layout": ["dist/layout.d.ts"],
       "action": ["dist/action.d.ts"],
       "client": ["dist/client.d.ts"],
+      "client/bindings": ["dist/client/bindings.d.ts"],
       "i18n": ["dist/i18n.d.ts"],
       "telemetry": ["dist/telemetry.d.ts"]
     }
