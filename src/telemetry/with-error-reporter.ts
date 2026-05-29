@@ -1,5 +1,6 @@
 import type { ErrorAttributes, ErrorLevel, ErrorReporter } from '@arckit/telemetry';
 import type { PipeMiddleware, ServerActionResult } from '../action';
+import { preservingAfter } from './preserving-after';
 import type { Scheduler } from './scheduler';
 
 type AttributesExtractor<TCtx> = (ctx: TCtx) => ErrorAttributes;
@@ -12,7 +13,7 @@ type WithErrorReporterOptions<TCtx> = {
 const toError = (caught: unknown): Error => (caught instanceof Error ? caught : new Error(String(caught)));
 
 export const withErrorReporter =
-  (reporter: ErrorReporter, schedule: Scheduler) =>
+  (reporter: ErrorReporter, schedule: Scheduler = preservingAfter) =>
   <TCtx extends object>(
     event: string,
     { level = 'error', extractAttributes }: WithErrorReporterOptions<TCtx> = {}
