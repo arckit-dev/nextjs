@@ -20,7 +20,7 @@ type MiddlewareEntry = AnyMiddleware | AnyMiddleware[];
 
 type InitialRouteContext = { params: Record<string, string> };
 
-interface RouteBuilder<TCtx extends object> {
+export interface RouteBuilder<TCtx extends object> {
   use<O1 extends object>(m1: TypedMiddleware<TCtx, O1>): RouteBuilder<Merge<TCtx, O1>>;
 
   use<O1 extends object, O2 extends object>(

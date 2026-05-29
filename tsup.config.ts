@@ -6,6 +6,7 @@ export default defineConfig({
     index: 'src/index.ts',
     page: 'src/page/index.ts',
     'page/middlewares': 'src/page/middlewares/index.ts',
+    route: 'src/route/index.ts',
     client: 'src/client/index.ts',
     i18n: 'src/i18n/index.ts',
     telemetry: 'src/telemetry/index.ts'
