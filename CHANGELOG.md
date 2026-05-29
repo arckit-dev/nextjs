@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/arckit-dev/nextjs/compare/v1.11.0...v1.12.0) (2026-05-29)
+
+
+### Features
+
+* **page:** add redirectTo finalizer and extend use overloads to six ([9f7e59b](https://github.com/arckit-dev/nextjs/commit/9f7e59bc1e7592caa51df42c4d1714e2110c9749))
+
 # [1.11.0](https://github.com/arckit-dev/nextjs/compare/v1.10.0...v1.11.0) (2026-05-29)
 
 
