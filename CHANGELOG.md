@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/arckit-dev/nextjs/compare/v1.9.0...v1.10.0) (2026-05-29)
+
+
+### Features
+
+* **telemetry:** ship preservingAfter scheduler and default to it ([590a790](https://github.com/arckit-dev/nextjs/commit/590a79028835f82c34e7856c23be3b68b7fe2f65))
+
 # [1.9.0](https://github.com/arckit-dev/nextjs/compare/v1.8.0...v1.9.0) (2026-05-29)
 
 
