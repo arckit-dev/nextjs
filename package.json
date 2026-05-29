@@ -56,6 +56,16 @@
         "default": "./dist/route.cjs"
       }
     },
+    "./layout": {
+      "import": {
+        "types": "./dist/layout.d.ts",
+        "default": "./dist/layout.js"
+      },
+      "require": {
+        "types": "./dist/layout.d.cts",
+        "default": "./dist/layout.cjs"
+      }
+    },
     "./client": {
       "import": {
         "types": "./dist/client.d.ts",
@@ -95,6 +105,7 @@
       "page": ["dist/page.d.ts"],
       "page/middlewares": ["dist/page/middlewares.d.ts"],
       "route": ["dist/route.d.ts"],
+      "layout": ["dist/layout.d.ts"],
       "client": ["dist/client.d.ts"],
       "i18n": ["dist/i18n.d.ts"],
       "telemetry": ["dist/telemetry.d.ts"]
