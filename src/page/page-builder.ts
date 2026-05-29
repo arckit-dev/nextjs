@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import type { InjectionKey } from 'piqure/src/Providing';
 import type { ReactNode } from 'react';
 import { ERROR_PREFIX_KEY } from '../action/technical-error-formatter';
@@ -37,7 +38,26 @@ export interface PageBuilder<TCtx extends object> {
     m4: TypedMiddleware<TCtx, O4>
   ): PageBuilder<Merge<Merge<Merge<Merge<TCtx, O1>, O2>, O3>, O4>>;
 
+  use<O1 extends object, O2 extends object, O3 extends object, O4 extends object, O5 extends object>(
+    m1: TypedMiddleware<TCtx, O1>,
+    m2: TypedMiddleware<TCtx, O2>,
+    m3: TypedMiddleware<TCtx, O3>,
+    m4: TypedMiddleware<TCtx, O4>,
+    m5: TypedMiddleware<TCtx, O5>
+  ): PageBuilder<Merge<Merge<Merge<Merge<Merge<TCtx, O1>, O2>, O3>, O4>, O5>>;
+
+  use<O1 extends object, O2 extends object, O3 extends object, O4 extends object, O5 extends object, O6 extends object>(
+    m1: TypedMiddleware<TCtx, O1>,
+    m2: TypedMiddleware<TCtx, O2>,
+    m3: TypedMiddleware<TCtx, O3>,
+    m4: TypedMiddleware<TCtx, O4>,
+    m5: TypedMiddleware<TCtx, O5>,
+    m6: TypedMiddleware<TCtx, O6>
+  ): PageBuilder<Merge<Merge<Merge<Merge<Merge<Merge<TCtx, O1>, O2>, O3>, O4>, O5>, O6>>;
+
   render(handler: (ctx: TCtx, props: PageProps) => Promise<ReactNode>): (props: PageProps) => Promise<ReactNode>;
+
+  redirectTo(getUrl: (ctx: TCtx) => string): (props: PageProps) => Promise<never>;
 }
 
 type PageBuilderOptions = {
@@ -68,6 +88,18 @@ export const createPageBuilder =
           const route = render(pipeline)(handler);
           const { wrap } = options ?? {};
           return wrap ? (props: PageProps) => wrap(() => route(props)) : route;
+        },
+
+        redirectTo: (getUrl: (ctx: TCtx) => string) => {
+          const pipeline: Pipeline<TCtx, PageProps, 'page'> = {
+            _ctx: {} as TCtx,
+            _extra: {} as PageProps,
+            _finalizer: 'page',
+            middlewares: entries
+          };
+          const route = render(pipeline)(async (ctx) => redirect(getUrl(ctx)));
+          const { wrap } = options ?? {};
+          return (wrap ? (props: PageProps) => wrap(() => route(props)) : route) as (props: PageProps) => Promise<never>;
         }
       }) as PageBuilder<TCtx>;
 
