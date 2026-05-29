@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/arckit-dev/nextjs/compare/v1.12.0...v1.13.0) (2026-05-29)
+
+
+### Features
+
+* **page:** add ./page and ./page/middlewares subpath exports ([b224853](https://github.com/arckit-dev/nextjs/commit/b224853b3da998af0ea667fa4f5fc8d7d6c0a5f4))
+
 # [1.12.0](https://github.com/arckit-dev/nextjs/compare/v1.11.0...v1.12.0) (2026-05-29)
 
 
