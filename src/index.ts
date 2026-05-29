@@ -11,3 +11,4 @@ export { csvResponse, csvStreamResponse } from './route/response';
 export { routeBuilder } from './route/route-builder';
 export type { Pipeline } from './types';
 export { createWithClientBinder } from './with-client-binder';
+export { withFetch } from './with-fetch';
