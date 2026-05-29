@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/arckit-dev/nextjs/compare/v1.10.0...v1.11.0) (2026-05-29)
+
+
+### Features
+
+* **telemetry:** expose deferWithContext seam and cover preservingAfter ([7d5d8ed](https://github.com/arckit-dev/nextjs/commit/7d5d8ed8e7817c5e07b05b57eb810e5104cbb193))
+
 # [1.10.0](https://github.com/arckit-dev/nextjs/compare/v1.9.0...v1.10.0) (2026-05-29)
 
 
