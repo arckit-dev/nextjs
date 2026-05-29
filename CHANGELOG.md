@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/arckit-dev/nextjs/compare/v1.8.0...v1.9.0) (2026-05-29)
+
+
+### Features
+
+* **telemetry:** add server-action and page middlewares subpath ([de793a9](https://github.com/arckit-dev/nextjs/commit/de793a939511ee287d4b9f25863b74dcc134c00f))
+
 # [1.8.0](https://github.com/arckit-dev/nextjs/compare/v1.7.0...v1.8.0) (2026-05-28)
 
 
