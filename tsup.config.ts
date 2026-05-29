@@ -5,7 +5,8 @@ export default defineConfig({
   entry: {
     index: 'src/index.ts',
     client: 'src/client/index.ts',
-    i18n: 'src/i18n/index.ts'
+    i18n: 'src/i18n/index.ts',
+    telemetry: 'src/telemetry/index.ts'
   },
   format: ['esm', 'cjs'],
   dts: true,
