@@ -46,6 +46,16 @@
         "default": "./dist/page/middlewares.cjs"
       }
     },
+    "./page/middlewares/either": {
+      "import": {
+        "types": "./dist/page/middlewares/either.d.ts",
+        "default": "./dist/page/middlewares/either.js"
+      },
+      "require": {
+        "types": "./dist/page/middlewares/either.d.cts",
+        "default": "./dist/page/middlewares/either.cjs"
+      }
+    },
     "./route": {
       "import": {
         "types": "./dist/route.d.ts",
@@ -74,6 +84,16 @@
       "require": {
         "types": "./dist/action.d.cts",
         "default": "./dist/action.cjs"
+      }
+    },
+    "./action/either": {
+      "import": {
+        "types": "./dist/action/either.d.ts",
+        "default": "./dist/action/either.js"
+      },
+      "require": {
+        "types": "./dist/action/either.d.cts",
+        "default": "./dist/action/either.cjs"
       }
     },
     "./client": {
@@ -124,9 +144,11 @@
     "*": {
       "page": ["dist/page.d.ts"],
       "page/middlewares": ["dist/page/middlewares.d.ts"],
+      "page/middlewares/either": ["dist/page/middlewares/either.d.ts"],
       "route": ["dist/route.d.ts"],
       "layout": ["dist/layout.d.ts"],
       "action": ["dist/action.d.ts"],
+      "action/either": ["dist/action/either.d.ts"],
       "client": ["dist/client.d.ts"],
       "client/bindings": ["dist/client/bindings.d.ts"],
       "i18n": ["dist/i18n.d.ts"],
@@ -232,5 +254,8 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "dependencies": {
+    "@standard-schema/spec": "^1.1.0"
   }
 }
