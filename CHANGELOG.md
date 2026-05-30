@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/arckit-dev/nextjs/compare/v1.15.0...v2.0.0) (2026-05-30)
+
+
+* feat!: validator-agnostic decode via Standard Schema, isolate effect ([2690a97](https://github.com/arckit-dev/nextjs/commit/2690a97ff55986cbfb6d23c5a60b11d20c44bdc6))
+
+
+### BREAKING CHANGES
+
+* fromEither moves to @arckit/nextjs/action/either;
+withEither/withOptionalEither move to @arckit/nextjs/page/middlewares/either;
+withDecode's tagged `handlers` arg is replaced by a single `onInvalid` callback
+(default notFound).
+
 # [1.15.0](https://github.com/arckit-dev/nextjs/compare/v1.14.0...v1.15.0) (2026-05-29)
 
 
