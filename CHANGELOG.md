@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/arckit-dev/nextjs/compare/v2.0.0...v2.1.0) (2026-06-15)
+
+
+### Features
+
+* **route:** add createWithErrorHandler reporting exceptions to telemetry ([fef8bc0](https://github.com/arckit-dev/nextjs/commit/fef8bc01a97f40d76b1581e3cdcf42bf25fcf5af))
+
 # [2.0.0](https://github.com/arckit-dev/nextjs/compare/v1.15.0...v2.0.0) (2026-05-30)
 
 
