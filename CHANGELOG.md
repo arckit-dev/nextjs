@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/arckit-dev/nextjs/compare/v2.1.0...v2.2.0) (2026-06-15)
+
+
+### Features
+
+* **route:** add createWithLogger for request logging ([5fd5858](https://github.com/arckit-dev/nextjs/commit/5fd5858449df3afae891fd7fc884c8c9fad2b0a7))
+
 # [2.1.0](https://github.com/arckit-dev/nextjs/compare/v2.0.0...v2.1.0) (2026-06-15)
 
 
