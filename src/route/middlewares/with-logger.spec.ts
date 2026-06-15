@@ -68,7 +68,7 @@ describe('createWithLogger (route)', () => {
 
   it('logs at the configured level', async () => {
     const { logger, entries } = recordingLogger();
-    const handle = createWithLogger(logger, syncScheduler)('lieux', { level: 'debug' })(async () => new Response(null));
+    const handle = createWithLogger(logger, syncScheduler)('lieux')(async () => new Response(null), { level: 'debug' });
 
     await handle(context());
 
@@ -78,9 +78,9 @@ describe('createWithLogger (route)', () => {
   it('includes attributes extracted from the context', async () => {
     const { logger, entries } = recordingLogger();
     type Ctx = { request: NextRequest; searchParams: { region: string } };
-    const handle = createWithLogger(logger, syncScheduler)<Ctx>('lieux', {
+    const handle = createWithLogger(logger, syncScheduler)('lieux')<Ctx>(async () => new Response(null), {
       extractAttributes: (ctx) => ({ region: ctx.searchParams.region })
-    })(async () => new Response(null));
+    });
 
     await handle({ ...context(), searchParams: { region: 'bretagne' } } as Ctx);
 
