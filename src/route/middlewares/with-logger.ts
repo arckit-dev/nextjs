@@ -21,8 +21,11 @@ const errorType = (error: unknown): string => (error instanceof Error ? error.na
 
 export const createWithLogger =
   (logger: Logger, schedule: Scheduler = preservingAfter) =>
-  <TCtx extends RequestContext>(event: string, { level = 'info', extractAttributes }: WithLoggerOptions<TCtx> = {}) =>
-  (handler: (ctx: TCtx) => Promise<Response>) =>
+  (event: string) =>
+  <TCtx extends RequestContext>(
+    handler: (ctx: TCtx) => Promise<Response>,
+    { level = 'info', extractAttributes }: WithLoggerOptions<TCtx> = {}
+  ) =>
   async (ctx: TCtx): Promise<Response> => {
     const start = performance.now();
     try {
