@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/arckit-dev/nextjs/compare/v2.2.0...v2.2.1) (2026-06-15)
+
+
+### Bug Fixes
+
+* **route:** infer route context in createWithLogger ([f26a77d](https://github.com/arckit-dev/nextjs/commit/f26a77db43a486f6af93eb6065efb23ee274b401))
+
 # [2.2.0](https://github.com/arckit-dev/nextjs/compare/v2.1.0...v2.2.0) (2026-06-15)
 
 
